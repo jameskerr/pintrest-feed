@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-require './config/environments'
+require './environments'
 require 'httparty'
 require 'json'
 require 'active_support/core_ext/hash'
