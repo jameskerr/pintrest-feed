@@ -1,0 +1,41 @@
+<h1>JSON data for: <%= @user %></h1>
+<pre class="json_output">
+<%=h @rss%>
+</pre>
+<h1><%= @feed["title"] %></h1>
+<a title="Pintrest Link" href="<%=h @feed['link'][0] %>"><%=h @feed['link'][0] %></a>
+<p><%= @feed["description"] %></p>
+<div class="feed_loading">
+	<div class="rss_feed">	
+		<% @items.each do |i| %>
+		<div class="rss_item">
+			<table>
+				<tr>
+					<td style="width: 500px">
+						<h3 class="rss_title">
+							<a title='<%= i["title"] %>' href='<%= i["link"] %>'><%= i["title"] %>...</a> - 
+							<%= Date.parse(i["pubDate"]) %>
+						</h3>
+						<%= i["description"] %>			
+					</td>
+					<td style="width: 20%">
+						<div class='button save_button'
+							 data-link='<%=h i["link"] %>'
+							 data-guid='<%=h i["guid"] %>'
+							 data-pubDate='<%=h i["pubDate"]%>'
+							 data-title='<%=h i["title"] %>'
+							 data-description='<%=h i["description"] %>'>
+							 Save
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+<!--
+i["pubDate"]
+i["guid"]
+	-->

@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" type="text/css" href="normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="jquery.js"></script>
+  <script src="pin_script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="left_fixed_nav">
+			<div class="header">
+				<h1>James Kerr</h1>
+				<p><em>wants to work for you!</em></p>
+				<img class="headshot" src="headshot.jpg" width="242" height="242"/>
+			</div>
+			<div class="menu">
+				<form action="/pins" method="post">
+					<h1>Enter Pintrest Username ↓</h1>
+					<input id="user" class="menu_input" name="user" value="<%= @user %>" type="text"/>
+					<br/>
+					<input class="button" type="submit" value="Get Feed!"/>
+				</form>
+				<a href="/saved" class="button">View Saved Items</a>
+			</div>
+		</div>
+		<div class="right_content">
+		<%= yield %>		
+		</div> <!-- end right half -->
+	</div> <!-- end whole container -->
+</body>
+</html>

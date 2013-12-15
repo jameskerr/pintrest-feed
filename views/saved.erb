@@ -1,0 +1,15 @@
+<h1>Your Saved Items</h1>
+<div class="rss_feed">	
+	<% if @items.count == 0 %>
+	<p>You don't have any items saved yet.</p>
+	<% end %>
+	<% @items.each do |i| %>
+	<div class="rss_item">
+		<h3 class="rss_title">
+			<a title='<%= i.title %>' href='<%= i.link %>'><%= i.title %>...</a> - 
+			<%= i.pubDate %>
+		</h3>
+		<%= i.description %>
+	</div>
+	<% end %>
+</div>

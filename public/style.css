@@ -1,0 +1,158 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #3F3F3F;
+}
+pre {
+	background: #333;
+	color: #fff;
+	padding: .5em 1em;
+	border-radius: 4px;
+	display: block;
+	line-height: 2em;
+	font-size: .8em;
+}
+pre.json_output {
+	height: 300px;
+	overflow-y: scroll;
+}
+.container:before,
+.container:after {
+	content: '';
+	display: table;
+}
+.container:after {
+	clear: both;
+}
+.left_fixed_nav {
+	position: fixed;
+	width: 290px;
+	height: 100%;
+	background: #333;
+	box-shadow: inset -4px 0 10px #000;
+	color: #fff;
+}
+.right_content {
+	margin-left: 290px;
+	padding: 0 1.5em;
+}
+.header {
+	color: #fff;
+	text-align: center;
+}
+.header h1 {
+	font-weight: 300;
+}
+.headshot {
+	border-radius: 100%;
+	border: 3px solid white;
+}
+.menu {
+	text-align: center;
+}
+.menu_input {
+	width: 100%;
+}
+.button {
+	display: block;
+	width: 100%;
+	height: 64px;
+	text-align: center;
+	vertical-align: center;
+	line-height: 64px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	background: #AF3714;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 5px #631D1D;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	font-size: 1em;
+	-webkit-user-select: none;
+ 	-moz-user-select: none;     
+   	-ms-user-select: none;      
+  	-o-user-select: none;
+ 	 user-select: none;
+ 	outline: none;
+ 	text-decoration: none;
+}
+
+
+.button:hover {
+	top: 1px;
+	box-shadow: 0 4px inherit;
+}
+.button:active, .button:focus {
+	top: 5px;
+	box-shadow: none;
+}
+.save_button {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+.disabled_button, .disabled_button:hover, .disabled_buttom:focus, .disabled_buttom:active {
+	background: #3B8A4B;
+	box-shadow: none;
+	top:0px;
+}
+
+.menu {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.blog_header {
+	text-align: justify;
+}
+.blog_date {
+	font-weight: 300;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	
+}
+.blog_title {
+	display: inline-block;
+	margin:0;
+	padding: 2em 0 0;
+	font-size: 2em;
+}
+.rss_feed {
+	position: relative;
+	z-index: -1;
+}
+.feed_loading {
+	position: relative;
+	background: url("loading.gif") no-repeat top center rgba(255,255,255, 0.9);
+	z-index: initial;
+}
+.rss_item {
+	border-top: 1px solid #333;
+	clear: both;
+}
+.rss_item img {
+	display: none;
+}
+.center_cropped {
+    width: 80px;  
+    height: 80px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+}
+.rss_thumb {
+	float:left;
+	margin: 14px 14px 14px 0;
+	clear: both;
+}
+img.loading {
+	display: inline;
+	height: 50px;
+	width: auto;
+}
