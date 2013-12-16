@@ -1,6 +1,6 @@
-configure :production, :development do 
+configure :production do 
     
-db = URI.parse(ENV['DATABASE_URL'] || 'postgres://user@localhost/dbname')
+db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/pintrest_feed_db')
 
 ActiveRecord::Base.establish_connection(
     :adapter => 'postgresql',
@@ -10,5 +10,8 @@ ActiveRecord::Base.establish_connection(
     :database => db.path[1..-1],
     :encoding => 'utf8'
 )
+end
 
+configure :development do
+	set :database, 'sqlite:///dev.db'
 end

@@ -5,11 +5,24 @@
 	<% end %>
 	<% @items.each do |i| %>
 	<div class="rss_item">
-		<h3 class="rss_title">
-			<a title='<%= i.title %>' href='<%= i.link %>'><%= i.title %>...</a> - 
-			<%= i.pubDate %>
-		</h3>
-		<%= i.description %>
+		<table>
+			<tr>
+				<td style="width: 500px">
+					<h3 class="rss_title">
+						<a title='<%= i.title %>' href='<%= i.link %>'><%= i.title %>...</a> - 
+						<%= Date.parse(i.pubdate) unless i.pubdate.nil? %>
+					</h3>
+					<%= i.description %>
+				</td>
+				<td style="width: 20%">
+					<div class='button delete_button'
+						 data-id='<%= i.id %>'>
+						 X
+					</div>
+				</td>
+			</tr>
+		</table>
+		
 	</div>
 	<% end %>
 </div>

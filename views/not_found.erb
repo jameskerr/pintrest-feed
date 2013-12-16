@@ -1,1 +1,5 @@
+<% if @user.empty? %>
+<h1>Please enter a username...</h1>
+<% else %>
 <h1>Oops...I couldn't find <%= @user %>'s feed :(</h1>
+<% end %>

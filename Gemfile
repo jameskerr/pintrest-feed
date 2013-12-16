@@ -6,4 +6,11 @@ gem "sinatra-contrib"
 gem "activerecord"
 gem "sinatra-activerecord"
 gem "httparty"
-gem "pg"
+
+group :production do
+	gem "pg"
+end
+group :development do 
+	gem "sqlite"
+end
+

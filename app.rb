@@ -5,8 +5,6 @@ require 'httparty'
 require 'json'
 require 'active_support/core_ext/hash'
 
-enable :sessions
-
 class Item < ActiveRecord::Base
 	validates_uniqueness_of :guid
 end
@@ -45,6 +43,10 @@ post "/save" do
 	end
 end
 
+post "/delete" do 
+	Item.destroy(params[:id])
+	"0 - Item deleted"
+end
 
 helpers do
 	def title

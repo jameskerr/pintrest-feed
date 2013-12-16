@@ -43,6 +43,10 @@ pre.json_output {
 }
 .header h1 {
 	font-weight: 300;
+	margin-bottom: 0;
+}
+.header p {
+	margin-top: 0;
 }
 .headshot {
 	border-radius: 100%;
@@ -91,6 +95,11 @@ pre.json_output {
 }
 .save_button {
 	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+.delete_button {
+	width: 50px;
 	height: 50px;
 	line-height: 50px;
 }
