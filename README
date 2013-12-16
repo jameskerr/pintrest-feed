@@ -1,0 +1,8 @@
+Hello Chapman SMC Web Team!
+
+Thank you for considering my application. I absolutely love web development and am very grateful for this opportunity to interview with your team.
+
+This is my submission to your coding challenge. This web app will query a user's Pintrest feed and return that data in a JSON format. I also added the ability for the user to save feeds to a database. This web app is built using Sinatra and hosted with Heroku.
+
+Sincerely,
+James
