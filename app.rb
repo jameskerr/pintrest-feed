@@ -1,3 +1,4 @@
+# REQUIRED LIBRARIES
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
@@ -5,10 +6,12 @@ require 'httparty'
 require 'json'
 require 'active_support/core_ext/hash'
 
+# DATABASE MODEL FOR THE RSS ITEMS
 class Item < ActiveRecord::Base
 	validates_uniqueness_of :guid
 end
 
+# SERVER ROUTES
 get "/" do
 	@title = "Welcome"
 	erb :"index"
@@ -62,6 +65,7 @@ helpers do
   	end
 end
 
+# DATABASE CLEAN UP
 after do
         ActiveRecord::Base.clear_active_connections!
 end
